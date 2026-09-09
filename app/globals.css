@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
+@import "tailwindcss";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9f6ff;
+  --foreground: #3b304c;
+  --primary-clr: #decdff;
+  --secondary-clr: #f9db34;
+  --black-clr: #272033;
+  --card-clr-1: #ffefcd;
+  --card-clr-2: #80642c;
+  --card-clr-3: #e8fff7;
+  --btn-clr: #4b4210;
+  --section-clr: #97fedb;
+  --footer-clr: #e2d0ff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary-clr);
+  --color-secondary: var(--secondary-clr);
+  --color-blackClr: var(--black-clr);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-cardClr-1: var(--card-clr-1);
+  --color-cardClr-2: var(--card-clr-2);
+  --color-cardClr-3: var(--card-clr-3);
+  --color-btnClr: var(--btn-clr);
+  --color-secClr: var(--section-clr);
+  --color-footerClr: var(--footer-clr);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply leading-[1.1];
+  }
+  p {
+    @apply lg:text-lg;
+  }
+  button {
+    @apply cursor-pointer;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .container {
+    @apply px-4 xl:px-[4vw] mx-auto max-w-376 w-full;
+  }
+  .shadow {
+    @apply shadow-[3px_6px_0_var(--black-clr)];
+  }
+  .cust-border {
+    @apply border-[6px] border-blackClr;
+  }
+  .section-title {
+    @apply text-4xl font-bold lg:text-6xl;
+  }
+  .card {
+    @apply border-4 border-blackClr shadow-[3px_5px_0_var(--black-clr)] rounded-3xl;
+  }
+  .btn {
+    @apply border-3 shadow-[3px_4px_0_var(--btn-clr)] rounded-xl border-btnClr;
+  }
+  .text-line {
+    @apply overflow-hidden text-nowrap;
+  }
 }
