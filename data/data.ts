@@ -93,14 +93,14 @@ export const cleaners = [
     img: "/images/cleaner-3.png",
     name: "Carlos D.",
     role: "Sanitation Enginner",
-    rate: "4.3 (117)",
+    rate: "4.7 (117)",
   },
   {
     id: 4,
     img: "/images/cleaner-4.png",
     name: "Anna L.",
-    role: "Houskeeper",
-    rate: "4.9 (287)",
+    role: "Housekeeper",
+    rate: "4.9 (280)",
   },
 ];
 
