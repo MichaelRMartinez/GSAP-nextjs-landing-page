@@ -23,7 +23,7 @@ export default function TopCleaners() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: cleanersRef.current,
-          start: "top center",
+          start: "top 60%",
         },
       });
       tl.from(titleSplit.chars, {

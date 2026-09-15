@@ -121,6 +121,6 @@ export const testiItems = [
     id: 3,
     icon: "/images/icon-12.svg",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ab praesentium inventore, aliquam dolores unde fuga cupiditate officia earum consequatur aperiam ipsum voluptas tempore",
-    author: "Michael S.",
+    author: "Jake R.",
   },
 ];

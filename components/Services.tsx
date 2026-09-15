@@ -23,7 +23,7 @@ export default function Services() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: servicesRef.current,
-          start: "top center",
+          start: "top 60%",
         },
       });
       tl.from(titleSplit.chars, {
