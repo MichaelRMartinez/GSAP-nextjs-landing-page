@@ -1,5 +1,5 @@
 "use client";
-import { gsap, useGSAP, SplitText } from "@/lib/gsap";
+import { gsap, useGSAP } from "@/lib/gsap";
 import { testiItems } from "@/data/data";
 import Image from "next/image";
 import { useRef } from "react";

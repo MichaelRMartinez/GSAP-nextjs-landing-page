@@ -1,8 +1,28 @@
+"use client";
+import { gsap, useGSAP } from "@/lib/gsap";
+import { useRef } from "react";
 import Image from "next/image";
 
 export default function Footer() {
+  const footerRef = useRef<HTMLElement | null>(null);
+
+  useGSAP(() => {
+    const cards = gsap.utils.toArray<HTMLDivElement>(".footer-card");
+
+    gsap.from(cards, {
+      scale: 0.7,
+      ease: "elastic.out(1,0.8)",
+      stagger: 0.3,
+      duration: 0.7,
+      scrollTrigger: {
+        trigger: footerRef.current,
+        start: "top center",
+      },
+    });
+  })
+
   return (<>
-    <footer className="py-16">
+    <footer className="py-16" ref={footerRef}>
       <div className="container grid gap-7 lg:grid-cols-2 relative">
 
         {/* CONTENT */}
